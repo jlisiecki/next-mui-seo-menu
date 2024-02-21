@@ -37,8 +37,8 @@ export default function MainMenuItem({
         {children}
         {submenu && (
           <PlayArrow
-            fontSize="small"
-            className="text-sky-300 rotate-90 text-xs"
+            className="text-sky-400 rotate-90"
+            style={{ fontSize: "12px" }}
           />
         )}
       </Link>

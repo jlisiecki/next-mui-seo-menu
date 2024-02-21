@@ -8,8 +8,8 @@ export default function Page() {
       <nav className="border-b shadow-lg relative z-10">
         <div className="flex justify-between items-center max-w-screen-2xl mx-auto py-4 px-6">
           <div>LOGO</div>
-          <menu className="gap-4 items-center hidden lg:flex">
-            {menuItems.map((props, key) => (
+          <menu className="gap-1 items-center hidden lg:flex">
+            {mainMenuItems.map((props, key) => (
               <MainMenuItem key={key} {...props} />
             ))}
           </menu>
@@ -23,7 +23,7 @@ export default function Page() {
     </>
   );
 }
-const menuItems: MainMenuItemProps[] = [
+const mainMenuItems: MainMenuItemProps[] = [
   { href: "/", children: "Check IMEI" },
   {
     href: "/imei-checker",
