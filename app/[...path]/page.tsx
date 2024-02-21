@@ -1,4 +1,5 @@
 import MainMenuItem from "@/components/MainMenuItem";
+import MobileMenu from "@/components/MobileMenu";
 import { type MainMenuItemProps } from "@/types";
 
 export default function Page() {
@@ -7,11 +8,12 @@ export default function Page() {
       <nav className="border-b">
         <div className="flex justify-between items-center max-w-screen-2xl mx-auto py-4 px-6">
           <div>LOGO</div>
-          <menu className="flex gap-4 items-center">
+          <menu className="gap-4 items-center hidden lg:flex">
             {menuItems.map((props, key) => (
               <MainMenuItem key={key} {...props} />
             ))}
           </menu>
+          <MobileMenu className="block lg:hidden" />
         </div>
       </nav>
       <main className="max-w-screen-2xl mx-auto py-4 px-6 flex flex-col gap-4">
