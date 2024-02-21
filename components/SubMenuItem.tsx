@@ -1,19 +1,17 @@
 "use client";
 
-import { MenuItem, type MenuItemProps } from "@mui/material";
+import { type MenuItemProps } from "@/types";
+import {
+  MenuItem,
+  type MenuItemProps as MUIMenuItemProps,
+} from "@mui/material";
 import _ from "lodash";
 import Link from "next/link";
-import { type ReactNode } from "react";
 
-interface SubMenuItemProps {
-  href: `/${string}` | `http${string}`;
-  children: ReactNode;
-}
-
-export default function SubMenuItem({ href, children }: SubMenuItemProps) {
+export default function SubMenuItem({ href, children }: MenuItemProps) {
   return (
     <MenuItem
-      component={(props: MenuItemProps) => (
+      component={(props: MUIMenuItemProps) => (
         <li {..._.omit(props, "children")}>
           <Link href={href}>{props.children}</Link>
         </li>
