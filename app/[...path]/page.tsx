@@ -1,6 +1,8 @@
 import MainMenuItem from "@/components/MainMenuItem";
 import MobileMenu from "@/components/MobileMenu";
 import { type MainMenuItemProps } from "@/types";
+import { Button } from "@mui/material";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -19,6 +21,17 @@ export default function Page() {
       <main className="max-w-screen-2xl mx-auto py-4 px-6 flex flex-col gap-4">
         <h1 className="text-2xl font-bold">Page</h1>
         <p>Hello content!</p>
+        <p>
+          <Button href="/news" LinkComponent={Link}>
+            {/* gdzie LinkComponent={Link} to next/link */}
+            Poprawny button
+          </Button>
+        </p>
+        <p>
+          <Link href="/imei">
+            <Button>Niepoprawny button</Button>
+          </Link>
+        </p>
       </main>
     </>
   );
