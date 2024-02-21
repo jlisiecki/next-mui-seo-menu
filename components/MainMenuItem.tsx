@@ -31,7 +31,7 @@ export default function MainMenuItem({
       ref={anchorRef}
     >
       <Link
-        className="hover:bg-slate-50 rounded-md px-2 py-1 flex items-center justify-center gap-1 font-oxanium"
+        className="hover:bg-slate-50 rounded-md px-2 py-1 flex items-center justify-center gap-2 font-oxanium"
         href={href}
       >
         {children}
