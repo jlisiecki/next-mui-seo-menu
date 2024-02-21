@@ -1,9 +1,13 @@
 import { type Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Oxanium } from "next/font/google";
 import "./globals.css";
 import { CssBaseline } from "@mui/material";
 
-const inter = Inter({ subsets: ["latin"] });
+const oxanium = Oxanium({
+  subsets: ["latin-ext"],
+  weight: ["200"],
+  variable: "--font-oxanium",
+});
 
 export const metadata: Metadata = {
   title: "Next.js + MUI SEO Menu Example",
@@ -16,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${oxanium.variable}`}>
         <CssBaseline />
         {children}
       </body>

@@ -1,6 +1,7 @@
 "use client";
 
 import { type MainMenuItemProps } from "@/types";
+import { PlayArrow } from "@mui/icons-material";
 import { Menu, Paper } from "@mui/material";
 import Link from "next/link";
 import {
@@ -29,7 +30,18 @@ export default function MainMenuItem({
       onMouseLeave={() => setOpen(false)}
       ref={anchorRef}
     >
-      <Link href={href}>{children}</Link>
+      <Link
+        className="hover:bg-slate-50 rounded-md px-2 py-1 flex items-center justify-center gap-1 font-oxanium"
+        href={href}
+      >
+        {children}
+        {submenu && (
+          <PlayArrow
+            fontSize="small"
+            className="text-sky-300 rotate-90 text-xs"
+          />
+        )}
+      </Link>
       {submenu && (
         <Menu
           open={true}
@@ -47,7 +59,7 @@ export default function MainMenuItem({
                 ref: Ref<HTMLDivElement>,
               ) => (
                 <div className="absolute pt-4">
-                  <Paper ref={ref} {...props} className="border" />
+                  <Paper ref={ref} {...props} className="border shadow-xl" />
                 </div>
               ),
             ),

@@ -13,7 +13,9 @@ export default function SubMenuItem({ href, children }: MenuItemProps) {
     <MenuItem
       component={(props: MUIMenuItemProps) => (
         <li {..._.omit(props, "children")}>
-          <Link href={href}>{props.children}</Link>
+          <Link className="font-oxanium" href={href}>
+            {props.children}
+          </Link>
         </li>
       )}
     >

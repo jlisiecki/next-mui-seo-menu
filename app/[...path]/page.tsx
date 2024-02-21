@@ -5,7 +5,7 @@ import { type MainMenuItemProps } from "@/types";
 export default function Page() {
   return (
     <>
-      <nav className="border-b">
+      <nav className="border-b shadow-lg relative z-10">
         <div className="flex justify-between items-center max-w-screen-2xl mx-auto py-4 px-6">
           <div>LOGO</div>
           <menu className="gap-4 items-center hidden lg:flex">
