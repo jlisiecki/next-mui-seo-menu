@@ -42,10 +42,10 @@ export default function MainMenuItem({
           />
         )}
       </Link>
-      {submenu && (
+      {submenu && anchorRef.current && (
         <Menu
-          open={true}
-          style={{ display: open ? "block" : "none" }}
+          open={open}
+          //className={open ? "block" : "hidden"}
           onClose={() => setOpen(false)}
           anchorEl={anchorRef.current}
           MenuListProps={{
